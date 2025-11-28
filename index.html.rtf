@@ -1,0 +1,1611 @@
+{\rtf1\ansi\ansicpg932\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset128 HiraginoSans-W3;\f2\fnil\fcharset0 LucidaGrande;
+\f3\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="ja">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>With AI | 
+\f1 \'96\'40\'90\'6c\'8c\'fc\'82\'af
+\f0 AI
+\f1 \'90\'6c\'8d\'de\'88\'e7\'90\'ac\'83\'76\'83\'8d\'83\'4f\'83\'89\'83\'80
+\f0 </title>\
+    <meta name="description" content="
+\f1 \'92\'86\'8f\'ac\'8a\'e9\'8b\'c6\'82\'cc
+\f0 AI
+\f1 \'93\'b1\'93\'fc\'82\'f0\'90\'ac\'8c\'f7\'82\'b3\'82\'b9\'82\'e9\'81\'41\'8e\'c0\'91\'48\'8c\'5e\'93\'ae\'89\'e6\'83\'76\'83\'8d\'83\'4f\'83\'89\'83\'80\'81\'42\'82\'bd\'82\'c1\'82\'bd\'88\'ea\'82\'c2\'82\'cc\'8b\'b3\'8d\'de\'82\'c5\'91\'67\'90\'44\'82\'cc
+\f0 DX
+\f1 \'82\'f0\'89\'c1\'91\'ac\'82\'b3\'82\'b9\'82\'dc\'82\'b7\'81\'42
+\f0 ">\
+    <!-- Google Fonts -->\
+    <link rel="preconnect" href="https://fonts.googleapis.com">\
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">\
+    \
+    <style>\
+        /* =========================================\
+           Variables & Reset\
+           ========================================= */\
+        :root \{\
+            --color-primary: #FFD43B;       /* 
+\f1 \'83\'41\'83\'4e\'83\'5a\'83\'93\'83\'67\'81\'69\'89\'a9\'90\'46\'81\'6a
+\f0  */\
+            --color-primary-hover: #eebb00; \
+            --color-text-main: #111111;\
+            --color-text-sub: #555555;\
+            --color-bg-base: #F5F7FB;       /* 
+\f1 \'94\'96\'82\'a2\'83\'75\'83\'8b\'81\'5b\'83\'4f\'83\'8c\'81\'5b
+\f0  */\
+            --color-bg-white: #FFFFFF;\
+            --color-bg-dark: #020617;       /* 
+\f1 \'94\'5a\'8d\'ae
+\f0  */\
+            --color-border: #E2E8F0;\
+            \
+            --font-family: "Noto Sans JP", sans-serif;\
+            \
+            --max-width: 1200px;\
+            --header-height: 80px;\
+            --radius-card: 16px;\
+            --radius-btn: 8px;\
+            \
+            --easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);\
+        \}\
+\
+        * \{\
+            margin: 0;\
+            padding: 0;\
+            box-sizing: border-box;\
+        \}\
+\
+        html \{\
+            scroll-behavior: smooth;\
+            scroll-padding-top: var(--header-height);\
+        \}\
+\
+        body \{\
+            font-family: var(--font-family);\
+            color: var(--color-text-main);\
+            background-color: var(--color-bg-base);\
+            line-height: 1.7;\
+            -webkit-font-smoothing: antialiased;\
+        \}\
+\
+        a \{\
+            text-decoration: none;\
+            color: inherit;\
+            transition: opacity 0.3s;\
+        \}\
+\
+        ul \{\
+            list-style: none;\
+        \}\
+\
+        img \{\
+            max-width: 100%;\
+            height: auto;\
+            vertical-align: bottom;\
+        \}\
+\
+        /* =========================================\
+           Utilities & Components\
+           ========================================= */\
+        .container \{\
+            width: 100%;\
+            max-width: var(--max-width);\
+            margin: 0 auto;\
+            padding: 0 24px;\
+        \}\
+\
+        .section \{\
+            padding: 100px 0;\
+        \}\
+        \
+        @media (max-width: 768px) \{\
+            .section \{ padding: 60px 0; \}\
+        \}\
+\
+        .section--white \{ background-color: var(--color-bg-white); \}\
+        .section--gray \{ background-color: var(--color-bg-base); \}\
+        .section--dark \{ background-color: var(--color-bg-dark); color: white; \}\
+\
+        .section__header \{\
+            text-align: center;\
+            max-width: 800px;\
+            margin: 0 auto 60px;\
+        \}\
+\
+        .section__title \{\
+            font-size: 2rem; /* 32px */\
+            font-weight: 700;\
+            margin-bottom: 16px;\
+            line-height: 1.4;\
+        \}\
+        \
+        .section__subtitle \{\
+            font-size: 1.1rem;\
+            color: var(--color-text-sub);\
+        \}\
+        \
+        .section--dark .section__subtitle \{\
+            color: #cbd5e1;\
+        \}\
+\
+        /* Buttons */\
+        .btn \{\
+            display: inline-flex;\
+            align-items: center;\
+            justify-content: center;\
+            font-weight: 700;\
+            border-radius: var(--radius-btn);\
+            padding: 14px 32px;\
+            font-size: 1rem;\
+            cursor: pointer;\
+            transition: transform 0.2s var(--easing), box-shadow 0.2s var(--easing), background-color 0.2s;\
+            line-height: 1;\
+        \}\
+\
+        .btn--primary \{\
+            background-color: var(--color-primary);\
+            color: var(--color-text-main);\
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\
+        \}\
+\
+        .btn--primary:hover \{\
+            background-color: var(--color-primary-hover);\
+            transform: scale(1.03);\
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);\
+        \}\
+\
+        .btn--text \{\
+            background: transparent;\
+            text-decoration: underline;\
+            padding: 8px 16px;\
+            font-weight: 500;\
+            color: white; /* 
+\f1 \'83\'71\'81\'5b\'83\'8d\'81\'5b\'93\'e0\'82\'c5\'82\'cc\'8e\'67\'97\'70\'82\'f0\'91\'7a\'92\'e8
+\f0  */\
+        \}\
+        \
+        .btn--text:hover \{\
+            opacity: 0.8;\
+        \}\
+\
+        /* Cards */\
+        .card \{\
+            background: var(--color-bg-white);\
+            border-radius: var(--radius-card);\
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);\
+            padding: 32px;\
+            transition: transform 0.3s ease, box-shadow 0.3s ease;\
+        \}\
+        \
+        .card:hover \{\
+            transform: translateY(-4px);\
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\
+        \}\
+\
+        /* Animation Utilities */\
+        .fade-in-up \{\
+            opacity: 0;\
+            transform: translateY(30px);\
+            transition: opacity 0.8s var(--easing), transform 0.8s var(--easing);\
+        \}\
+\
+        .fade-in-up.is-visible \{\
+            opacity: 1;\
+            transform: translateY(0);\
+        \}\
+\
+        /* =========================================\
+           1. Header\
+           ========================================= */\
+        .header \{\
+            height: var(--header-height);\
+            background-color: rgba(255, 255, 255, 0.95);\
+            backdrop-filter: blur(10px);\
+            position: fixed;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            z-index: 1000;\
+            border-bottom: 1px solid var(--color-border);\
+        \}\
+\
+        .header__inner \{\
+            display: flex;\
+            align-items: center;\
+            justify-content: space-between;\
+            height: 100%;\
+        \}\
+\
+        .header__logo \{\
+            font-size: 1.5rem;\
+            font-weight: 700;\
+            letter-spacing: -0.02em;\
+            display: flex;\
+            align-items: center;\
+            gap: 8px;\
+        \}\
+\
+        .header__logo span \{\
+            color: #2563EB; /* 
+\f1 \'90\'c2\'8c\'6e\'82\'c5\'92\'6d\'93\'49\'82\'c8\'88\'f3\'8f\'db\'82\'f0\'95\'74\'89\'c1
+\f0  */\
+        \}\
+\
+        .header__nav \{\
+            display: flex;\
+            align-items: center;\
+            gap: 32px;\
+        \}\
+\
+        .header__link \{\
+            font-size: 0.95rem;\
+            font-weight: 500;\
+            color: var(--color-text-main);\
+        \}\
+        \
+        .header__link:hover \{\
+            color: #2563EB;\
+        \}\
+\
+        .hamburger \{\
+            display: none;\
+            flex-direction: column;\
+            gap: 6px;\
+            cursor: pointer;\
+            border: none;\
+            background: none;\
+        \}\
+        \
+        .hamburger span \{\
+            width: 24px;\
+            height: 2px;\
+            background-color: var(--color-text-main);\
+            transition: 0.3s;\
+        \}\
+\
+        @media (max-width: 900px) \{\
+            .header__nav \{\
+                position: fixed;\
+                top: var(--header-height);\
+                left: 0;\
+                width: 100%;\
+                height: calc(100vh - var(--header-height));\
+                background-color: white;\
+                flex-direction: column;\
+                padding: 40px 24px;\
+                gap: 24px;\
+                transform: translateX(100%);\
+                transition: transform 0.3s ease;\
+                border-top: 1px solid var(--color-border);\
+            \}\
+            \
+            .header__nav.is-open \{\
+                transform: translateX(0);\
+            \}\
+\
+            .hamburger \{\
+                display: flex;\
+            \}\
+        \}\
+\
+        /* =========================================\
+           2. Hero Section\
+           ========================================= */\
+        .hero \{\
+            position: relative;\
+            padding: 160px 0 100px;\
+            background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.7)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop');\
+            background-size: cover;\
+            background-position: center;\
+            color: white;\
+            min-height: 80vh;\
+            display: flex;\
+            align-items: center;\
+        \}\
+\
+        .hero__container \{\
+            display: grid;\
+            grid-template-columns: 1fr 1fr;\
+            gap: 60px;\
+            align-items: center;\
+        \}\
+\
+        .hero__content \{\
+            max-width: 600px;\
+        \}\
+\
+        .hero__title \{\
+            font-size: 2.5rem;\
+            line-height: 1.3;\
+            font-weight: 700;\
+            margin-bottom: 24px;\
+        \}\
+\
+        .hero__description \{\
+            font-size: 1.1rem;\
+            line-height: 1.8;\
+            margin-bottom: 40px;\
+            color: #e2e8f0;\
+        \}\
+\
+        .hero__actions \{\
+            display: flex;\
+            flex-direction: column;\
+            gap: 16px;\
+            align-items: flex-start;\
+        \}\
+\
+        .hero__video-card \{\
+            background: rgba(255, 255, 255, 0.1);\
+            backdrop-filter: blur(8px);\
+            border: 1px solid rgba(255, 255, 255, 0.2);\
+            border-radius: var(--radius-card);\
+            padding: 24px;\
+            display: flex;\
+            flex-direction: column;\
+            gap: 16px;\
+            position: relative;\
+            overflow: hidden;\
+        \}\
+\
+        .hero__thumbnail \{\
+            width: 100%;\
+            aspect-ratio: 16/9;\
+            background-color: #000;\
+            border-radius: 8px;\
+            position: relative;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+        \}\
+        \
+        .play-icon \{\
+            width: 60px;\
+            height: 60px;\
+            background: rgba(255, 212, 59, 0.9);\
+            border-radius: 50%;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            color: black;\
+            font-size: 24px;\
+        \}\
+\
+        @media (max-width: 900px) \{\
+            .hero__container \{\
+                grid-template-columns: 1fr;\
+                gap: 40px;\
+            \}\
+            .hero__title \{ font-size: 2rem; \}\
+            .hero \{ padding-top: 120px; \}\
+        \}\
+\
+        /* =========================================\
+           3. Problem Section\
+           ========================================= */\
+        .problem__grid \{\
+            display: grid;\
+            grid-template-columns: repeat(3, 1fr);\
+            gap: 32px;\
+        \}\
+\
+        .problem-card \{\
+            text-align: center;\
+            padding: 40px 24px;\
+        \}\
+\
+        .problem-card__icon \{\
+            font-size: 3rem;\
+            margin-bottom: 24px;\
+            display: inline-block;\
+        \}\
+\
+        .problem-card__title \{\
+            font-size: 1.25rem;\
+            font-weight: 700;\
+            margin-bottom: 16px;\
+        \}\
+\
+        .problem-card__text \{\
+            color: var(--color-text-sub);\
+            font-size: 0.95rem;\
+        \}\
+\
+        @media (max-width: 768px) \{\
+            .problem__grid \{ grid-template-columns: 1fr; \}\
+        \}\
+\
+        /* =========================================\
+           4. Solution Section\
+           ========================================= */\
+        .solution__container \{\
+            display: grid;\
+            grid-template-columns: 1fr 1fr;\
+            gap: 60px;\
+            align-items: center;\
+        \}\
+\
+        .solution__list \{\
+            margin: 32px 0 40px;\
+        \}\
+\
+        .solution__item \{\
+            display: flex;\
+            align-items: flex-start;\
+            gap: 16px;\
+            margin-bottom: 20px;\
+            font-size: 1.05rem;\
+            font-weight: 500;\
+        \}\
+\
+        .check-icon \{\
+            color: #2563EB;\
+            font-weight: bold;\
+            flex-shrink: 0;\
+            margin-top: 4px;\
+        \}\
+\
+        .solution__image img \{\
+            border-radius: var(--radius-card);\
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);\
+        \}\
+\
+        @media (max-width: 900px) \{\
+            .solution__container \{ grid-template-columns: 1fr; \}\
+            .solution__image \{ order: -1; \}\
+        \}\
+\
+        /* =========================================\
+           5. Who Section\
+           ========================================= */\
+        .who__container \{\
+            display: grid;\
+            grid-template-columns: 1.2fr 0.8fr;\
+            gap: 40px;\
+            align-items: center;\
+        \}\
+\
+        .who__bubbles \{\
+            display: flex;\
+            flex-direction: column;\
+            gap: 20px;\
+        \}\
+\
+        .bubble \{\
+            background: white;\
+            padding: 20px 24px;\
+            border-radius: 20px 20px 20px 0;\
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);\
+            font-weight: 500;\
+            position: relative;\
+        \}\
+\
+        .bubble::before \{\
+            content: '';\
+            position: absolute;\
+            bottom: 0;\
+            left: -10px;\
+            width: 20px;\
+            height: 20px;\
+            background: white;\
+            border-radius: 0 0 0 20px;\
+            z-index: -1;\
+        \}\
+\
+        .who__image img \{\
+            border-radius: 200px 200px 20px 20px;\
+            width: 100%;\
+            height: 400px;\
+            object-fit: cover;\
+        \}\
+\
+        @media (max-width: 768px) \{\
+            .who__container \{ grid-template-columns: 1fr; \}\
+            .who__image \{ display: none; \} /* 
+\f1 \'83\'58\'83\'7d\'83\'7a\'82\'c5\'82\'cd\'95\'b6\'8f\'cd\'97\'44\'90\'e6\'82\'c5\'89\'e6\'91\'9c\'82\'f0\'89\'42\'82\'b7\'93\'99\'82\'cc\'92\'b2\'90\'ae
+\f0  */\
+        \}\
+\
+        /* =========================================\
+           6. What you get Section\
+           ========================================= */\
+        .feature__grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
+            gap: 32px;\
+        \}\
+\
+        .feature-card \{\
+            border: 1px solid var(--color-border);\
+            position: relative;\
+            overflow: hidden;\
+        \}\
+        \
+        .feature-card::before \{\
+            content: '';\
+            position: absolute;\
+            top: 0;\
+            left: 0;\
+            width: 4px;\
+            height: 100%;\
+            background-color: var(--color-primary);\
+        \}\
+\
+        .feature-badge \{\
+            background-color: rgba(255, 212, 59, 0.2);\
+            color: #9A7D0A;\
+            padding: 4px 12px;\
+            border-radius: 100px;\
+            font-size: 0.8rem;\
+            font-weight: 700;\
+            display: inline-block;\
+            margin-bottom: 16px;\
+        \}\
+\
+        .feature-card__title \{\
+            font-size: 1.2rem;\
+            font-weight: 700;\
+            margin-bottom: 12px;\
+        \}\
+\
+        /* =========================================\
+           7. Curriculum Section\
+           ========================================= */\
+        .timeline \{\
+            max-width: 800px;\
+            margin: 0 auto;\
+        \}\
+\
+        .timeline__item \{\
+            display: flex;\
+            gap: 24px;\
+            padding-bottom: 32px;\
+            position: relative;\
+        \}\
+        \
+        .timeline__item:last-child \{ padding-bottom: 0; \}\
+        \
+        .timeline__item::before \{\
+            content: '';\
+            position: absolute;\
+            left: 19px;\
+            top: 40px;\
+            width: 2px;\
+            height: calc(100% - 40px);\
+            background-color: var(--color-border);\
+        \}\
+        \
+        .timeline__item:last-child::before \{ display: none; \}\
+\
+        .timeline__number \{\
+            width: 40px;\
+            height: 40px;\
+            background-color: var(--color-text-main);\
+            color: white;\
+            border-radius: 50%;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            font-weight: 700;\
+            flex-shrink: 0;\
+            z-index: 1;\
+        \}\
+\
+        .timeline__content \{\
+            background: white;\
+            padding: 20px;\
+            border-radius: 8px;\
+            width: 100%;\
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);\
+            border: 1px solid var(--color-border);\
+        \}\
+\
+        .timeline__title \{\
+            font-weight: 700;\
+            font-size: 1.1rem;\
+            margin-bottom: 4px;\
+        \}\
+        \
+        .timeline__desc \{\
+            color: var(--color-text-sub);\
+            font-size: 0.9rem;\
+        \}\
+\
+        /* =========================================\
+           8. Case Section\
+           ========================================= */\
+        .case__container \{\
+            display: grid;\
+            grid-template-columns: 1fr 1fr;\
+            gap: 60px;\
+            align-items: center;\
+        \}\
+        \
+        .step-flow \{\
+            margin-bottom: 40px;\
+        \}\
+        \
+        .step-item \{\
+            display: flex;\
+            align-items: center;\
+            gap: 16px;\
+            margin-bottom: 16px;\
+        \}\
+        \
+        .step-num \{\
+            font-size: 0.9rem;\
+            font-weight: 700;\
+            color: #2563EB;\
+            background: #EFF6FF;\
+            padding: 4px 12px;\
+            border-radius: 4px;\
+        \}\
+        \
+        .case-box \{\
+            background: white;\
+            padding: 32px;\
+            border-radius: var(--radius-card);\
+            border-left: 4px solid var(--color-primary);\
+            margin-top: 40px;\
+        \}\
+\
+        @media (max-width: 900px) \{\
+            .case__container \{ grid-template-columns: 1fr; \}\
+        \}\
+\
+        /* =========================================\
+           9. Pricing Section\
+           ========================================= */\
+        .pricing__grid \{\
+            display: grid;\
+            grid-template-columns: repeat(3, 1fr);\
+            gap: 24px;\
+            align-items: stretch;\
+        \}\
+\
+        .pricing-card \{\
+            border: 1px solid var(--color-border);\
+            padding: 40px 24px;\
+            text-align: center;\
+            display: flex;\
+            flex-direction: column;\
+            background: white;\
+        \}\
+        \
+        .pricing-card--recommend \{\
+            border: 2px solid var(--color-primary);\
+            position: relative;\
+            transform: scale(1.05);\
+            z-index: 2;\
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);\
+        \}\
+        \
+        .recommend-badge \{\
+            position: absolute;\
+            top: -12px;\
+            left: 50%;\
+            transform: translateX(-50%);\
+            background: var(--color-primary);\
+            color: black;\
+            font-size: 0.8rem;\
+            font-weight: 700;\
+            padding: 4px 16px;\
+            border-radius: 20px;\
+        \}\
+\
+        .pricing-price \{\
+            font-size: 2.5rem;\
+            font-weight: 700;\
+            margin: 24px 0;\
+            color: var(--color-text-main);\
+        \}\
+        \
+        .pricing-price span \{\
+            font-size: 1rem;\
+            font-weight: 400;\
+            color: var(--color-text-sub);\
+        \}\
+\
+        .pricing-features \{\
+            text-align: left;\
+            margin-bottom: 32px;\
+            flex-grow: 1;\
+        \}\
+        \
+        .pricing-features li \{\
+            margin-bottom: 12px;\
+            padding-left: 20px;\
+            position: relative;\
+            font-size: 0.95rem;\
+            color: var(--color-text-sub);\
+        \}\
+        \
+        .pricing-features li::before \{\
+            content: '\'95';\
+            position: absolute;\
+            left: 0;\
+            color: var(--color-primary);\
+            font-weight: bold;\
+        \}\
+\
+        @media (max-width: 900px) \{\
+            .pricing__grid \{ grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; gap: 40px; \}\
+            .pricing-card--recommend \{ transform: scale(1); \}\
+        \}\
+\
+        /* =========================================\
+           10. FAQ Section\
+           ========================================= */\
+        .faq__container \{\
+            max-width: 800px;\
+            margin: 0 auto;\
+        \}\
+\
+        .faq-item \{\
+            border-bottom: 1px solid var(--color-border);\
+        \}\
+        \
+        .faq-item:first-child \{ border-top: 1px solid var(--color-border); \}\
+\
+        .faq-question \{\
+            width: 100%;\
+            text-align: left;\
+            padding: 24px 0;\
+            background: none;\
+            border: none;\
+            font-size: 1.1rem;\
+            font-weight: 700;\
+            cursor: pointer;\
+            display: flex;\
+            justify-content: space-between;\
+            align-items: center;\
+            color: var(--color-text-main);\
+        \}\
+        \
+        .faq-question::after \{\
+            content: '+';\
+            font-size: 1.5rem;\
+            font-weight: 400;\
+            transition: transform 0.3s;\
+        \}\
+        \
+        .faq-question.is-open::after \{\
+            transform: rotate(45deg);\
+        \}\
+\
+        .faq-answer \{\
+            max-height: 0;\
+            overflow: hidden;\
+            transition: max-height 0.3s ease-out;\
+            color: var(--color-text-sub);\
+        \}\
+        \
+        .faq-answer p \{\
+            padding-bottom: 24px;\
+        \}\
+\
+        /* =========================================\
+           11. Footer\
+           ========================================= */\
+        .footer \{\
+            background-color: var(--color-bg-dark);\
+            color: white;\
+            padding: 80px 0 24px;\
+        \}\
+\
+        .footer__content \{\
+            display: flex;\
+            justify-content: space-between;\
+            flex-wrap: wrap;\
+            gap: 40px;\
+            margin-bottom: 60px;\
+            border-bottom: 1px solid rgba(255,255,255,0.1);\
+            padding-bottom: 40px;\
+        \}\
+\
+        .footer__info h3 \{\
+            font-size: 1.5rem;\
+            margin-bottom: 24px;\
+            color: white;\
+        \}\
+        \
+        .footer__address \{\
+            color: #94a3b8;\
+            font-size: 0.9rem;\
+            line-height: 1.8;\
+        \}\
+\
+        .footer__copy \{\
+            text-align: center;\
+            font-size: 0.8rem;\
+            color: #64748b;\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+    <!-- 1. 
+\f1 \'83\'77\'83\'62\'83\'5f\'81\'5b
+\f0  -->\
+    <header class="header">\
+        <div class="container header__inner">\
+            <a href="#" class="header__logo">With AI <span>.</span></a>\
+            \
+            <nav class="header__nav" id="js-nav">\
+                <a href="#problem" class="header__link">
+\f1 \'93\'b1\'93\'fc\'82\'cc\'89\'db\'91\'e8
+\f0 </a>\
+                <a href="#feature" class="header__link">
+\f1 \'83\'54\'81\'5b\'83\'72\'83\'58\'93\'c1\'92\'a5
+\f0 </a>\
+                <a href="#curriculum" class="header__link">
+\f1 \'83\'4a\'83\'8a\'83\'4c\'83\'85\'83\'89\'83\'80
+\f0 </a>\
+                <a href="#pricing" class="header__link">
+\f1 \'97\'bf\'8b\'e0
+\f0 </a>\
+                <a href="#case" class="header__link">
+\f1 \'8e\'96\'97\'e1
+\f0 </a>\
+                <a href="#contact" class="btn btn--primary">
+\f1 \'96\'b3\'97\'bf\'91\'8a\'92\'6b\'81\'45\'83\'66\'83\'82
+\f0 </a>\
+            </nav>\
+\
+            <button class="hamburger" id="js-hamburger" aria-label="
+\f1 \'83\'81\'83\'6a\'83\'85\'81\'5b
+\f0 ">\
+                <span></span>\
+                <span></span>\
+                <span></span>\
+            </button>\
+        </div>\
+    </header>\
+\
+    <main>\
+        <!-- 2. 
+\f1 \'83\'74\'83\'40\'81\'5b\'83\'58\'83\'67\'83\'72\'83\'85\'81\'5b\'81\'69\'83\'71\'81\'5b\'83\'8d\'81\'5b\'81\'6a
+\f0  -->\
+        <section id="hero" class="hero">\
+            <div class="container hero__container">\
+                <div class="hero__content fade-in-up">\
+                    <h1 class="hero__title">
+\f1 \'82\'bd\'82\'c1\'82\'bd
+\f0 1
+\f1 \'82\'c2\'82\'cc\'93\'ae\'89\'e6\'83\'76\'83\'8d\'83\'4f\'83\'89\'83\'80\'82\'c5\'81\'41
+\f0 <br>
+\f1 \'8c\'e4\'8e\'d0\'82\'cc
+\f0 \'93AI
+\f1 \'90\'6c\'8d\'de\'95\'73\'91\'ab
+\f0 \'94
+\f1 \'82\'c9
+\f0 <br>
+\f1 \'8f\'49\'8e\'7e\'95\'84\'82\'f0\'81\'42
+\f0 </h1>\
+                    <p class="hero__description">\
+                        
+\f1 \'83\'63\'81\'5b\'83\'8b\'93\'b1\'93\'fc\'82\'be\'82\'af\'82\'c5\'82\'cd\'90\'69\'82\'dc\'82\'c8\'82\'a2\'8c\'bb\'8f\'ea\'82\'cc
+\f0 AI
+\f1 \'8a\'88\'97\'70\'81\'42
+\f0 <br>\
+                        
+\f1 \'8c\'6f\'89\'63\'91\'77\'82\'a9\'82\'e7\'8c\'bb\'8f\'ea\'82\'dc\'82\'c5\'81\'75\'8b\'a4\'92\'ca\'8c\'be\'8c\'ea\'81\'76\'82\'f0\'8d\'ec\'82\'e9\'81\'41\'96\'40\'90\'6c\'93\'c1\'89\'bb\'8c\'5e
+\f0 AI
+\f1 \'83\'8a\'83\'58\'83\'4c\'83\'8a\'83\'93\'83\'4f\'8d\'75\'8d\'c0\'81\'42
+\f0 \
+                    </p>\
+                    <div class="hero__actions">\
+                        <a href="#contact" class="btn btn--primary">
+\f1 \'8d\'a1\'82\'b7\'82\'ae\'96\'b3\'97\'bf\'91\'8a\'92\'6b\'82\'c9\'90\'5c\'82\'b5\'8d\'9e\'82\'de
+\f0 </a>\
+                        <a href="#" class="btn btn--text">
+\f1 \'82\'dc\'82\'b8\'82\'cd\'8e\'91\'97\'bf\'83\'5f\'83\'45\'83\'93\'83\'8d\'81\'5b\'83\'68
+\f0  &rarr;</a>\
+                    </div>\
+                </div>\
+                <div class="hero__image fade-in-up" style="transition-delay: 0.2s;">\
+                    <div class="hero__video-card">\
+                        <div class="hero__thumbnail">\
+                            <div class="play-icon">
+\f2 \uc0\u9654 
+\f0 </div>\
+                        </div>\
+                        <div style="color: white; font-weight: 700;">
+\f1 \'91\'e6
+\f0 1
+\f1 \'8f\'cd\'81\'46
+\f0 AI
+\f1 \'8e\'9e\'91\'e3\'82\'cc\'83\'72\'83\'57\'83\'6c\'83\'58\'90\'dd\'8c\'76\'90\'7d\'81\'69\'83\'54\'83\'93\'83\'76\'83\'8b\'81\'6a
+\f0 </div>\
+                        <div style="height: 6px; background: rgba(255,255,255,0.2); border-radius: 3px; overflow: hidden;">\
+                            <div style="width: 40%; background: var(--color-primary); height: 100%;"></div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 3. 
+\f1 \'89\'db\'91\'e8\'83\'5a\'83\'4e\'83\'56\'83\'87\'83\'93
+\f0  (Problem) -->\
+        <section id="problem" class="section section--white">\
+            <div class="container">\
+                <div class="section__header fade-in-up">\
+                    <h2 class="section__title">
+\f1 \'92\'86\'8f\'ac\'8a\'e9\'8b\'c6\'82\'aa
+\f0 AI
+\f1 \'8a\'88\'97\'70\'82\'c5
+\f0 <br>
+\f1 \'82\'c2\'82\'dc\'82\'b8\'82\'ad
+\f0 3
+\f1 \'82\'c2\'82\'cc\'97\'9d\'97\'52
+\f0 </h2>\
+                    <p class="section__subtitle">
+\f1 \'8d\'82\'8a\'7a\'82\'c8\'83\'63\'81\'5b\'83\'8b\'82\'f0\'93\'fc\'82\'ea\'82\'c4\'82\'e0\'81\'41\'90\'ac\'89\'ca\'82\'aa\'8f\'6f\'82\'c8\'82\'a2\'82\'cc\'82\'c9\'82\'cd\'8c\'b4\'88\'f6\'82\'aa\'82\'a0\'82\'e8\'82\'dc\'82\'b7
+\f0 </p>\
+                </div>\
+                <div class="problem__grid">\
+                    <div class="card problem-card fade-in-up">\
+                        <span class="problem-card__icon">
+\f3 \uc0\u55358 \u56596 
+\f0 </span>\
+                        <h3 class="problem-card__title">
+\f1 \'8e\'67\'82\'a2\'93\'b9\'82\'aa\'82\'ed\'82\'a9\'82\'e7\'82\'c8\'82\'a2
+\f0 </h3>\
+                        <p class="problem-card__text">
+\f1 \'81\'75
+\f0 ChatGPT
+\f1 \'82\'c6\'82\'e8\'82\'a0\'82\'a6\'82\'b8\'8c\'5f\'96\'f1\'82\'b5\'82\'bd\'81\'76\'8e\'7e\'82\'dc\'82\'e8\'82\'c5\'81\'41\'8b\'ef\'91\'cc\'93\'49\'82\'c8\'8b\'c6\'96\'b1\'82\'d6\'82\'cc\'97\'8e\'82\'c6\'82\'b5\'8d\'9e\'82\'dd\'95\'fb\'82\'aa\'8c\'bb\'8f\'ea\'82\'c9\'90\'5a\'93\'a7\'82\'b5\'82\'c4\'82\'a2\'82\'c8\'82\'a2\'81\'42
+\f0 </p>\
+                    </div>\
+                    <div class="card problem-card fade-in-up" style="transition-delay: 0.1s;">\
+                        <span class="problem-card__icon">
+\f3 \uc0\u55357 \u56430 \u8205 \u9794 \u65039 
+\f0 </span>\
+                        <h3 class="problem-card__title">
+\f1 \'83\'8a\'83\'58\'83\'4e\'82\'d6\'82\'cc\'95\'73\'88\'c0
+\f0 </h3>\
+                        <p class="problem-card__text">
+\f1 \'8f\'ee\'95\'f1\'98\'52\'89\'6b\'82\'e2\'92\'98\'8d\'ec\'8c\'a0\'90\'4e\'8a\'51\'82\'aa\'95\'7c\'82\'ad\'81\'41\'8e\'d0\'93\'e0\'83\'8b\'81\'5b\'83\'8b\'82\'e0\'90\'ae\'94\'f5\'82\'b3\'82\'ea\'82\'c4\'82\'a2\'82\'c8\'82\'a2\'82\'bd\'82\'df\'81\'41\'8f\'5d\'8b\'c6\'88\'f5\'82\'aa\'88\'de\'8f\'6b\'82\'b5\'82\'c4\'8e\'67\'82\'a6\'82\'c8\'82\'a2\'81\'42
+\f0 </p>\
+                    </div>\
+                    <div class="card problem-card fade-in-up" style="transition-delay: 0.2s;">\
+                        <span class="problem-card__icon">
+\f3 \uc0\u55357 \u56538 
+\f0 </span>\
+                        <h3 class="problem-card__title">
+\f1 \'8b\'b3\'88\'e7\'83\'8a\'83\'5c\'81\'5b\'83\'58\'95\'73\'91\'ab
+\f0 </h3>\
+                        <p class="problem-card__text">
+\f1 \'8f\'da\'82\'b5\'82\'a2\'8e\'d0\'88\'f5\'82\'aa\'88\'ea\'90\'6c\'82\'e0\'82\'a8\'82\'e7\'82\'b8\'81\'41\'8a\'4f\'95\'94\'83\'52\'83\'93\'83\'54\'83\'8b\'82\'f0\'8c\'d9\'82\'a4\'97\'5c\'8e\'5a\'82\'e0\'82\'c8\'82\'a2\'82\'bd\'82\'df\'81\'41\'91\'67\'90\'44\'93\'49\'82\'c8\'8a\'77\'8f\'4b\'82\'aa\'90\'69\'82\'dc\'82\'c8\'82\'a2\'81\'42
+\f0 </p>\
+                    </div>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 4. 
+\f1 \'89\'f0\'8c\'88\'83\'52\'83\'93\'83\'5a\'83\'76\'83\'67
+\f0  (Solution) -->\
+        <section class="section section--gray">\
+            <div class="container solution__container">\
+                <div class="solution__content fade-in-up">\
+                    <h2 class="section__title" style="text-align: left;">With AI 
+\f1 \'83\'72\'83\'66\'83\'49\'83\'76\'83\'8d\'83\'4f\'83\'89\'83\'80\'82\'aa
+\f0 <br>
+\f1 \'82\'bb\'82\'cc\'89\'db\'91\'e8\'82\'f0\'89\'f0\'8c\'88\'82\'b5\'82\'dc\'82\'b7
+\f0 </h2>\
+                    <p class="section__subtitle" style="text-align: left;">
+\f1 \'92\'6d\'8e\'af\'83\'5b\'83\'8d\'82\'a9\'82\'e7\'8e\'c0\'96\'b1\'83\'8c\'83\'78\'83\'8b\'82\'dc\'82\'c5\'81\'41\'8d\'c5\'92\'5a\'8b\'97\'97\'a3\'82\'c5\'93\'b1\'82\'ad\'90\'dd\'8c\'76\'81\'42
+\f0 </p>\
+                    \
+                    <ul class="solution__list">\
+                        <li class="solution__item">\
+                            <span class="check-icon">
+\f2 \uc0\u10003 
+\f0 </span>\
+                            <span>
+\f1 \'90\'ea\'96\'e5\'97\'70\'8c\'ea\'82\'f0\'8e\'67\'82\'ed\'82\'c8\'82\'a2\'81\'75\'8c\'bb\'8f\'ea\'96\'da\'90\'fc\'81\'76\'82\'cc\'82\'ed\'82\'a9\'82\'e8\'82\'e2\'82\'b7\'82\'a2\'89\'f0\'90\'e0
+\f0 </span>\
+                        </li>\
+                        <li class="solution__item">\
+                            <span class="check-icon">
+\f2 \uc0\u10003 
+\f0 </span>\
+                            <span>
+\f1 \'96\'be\'93\'fa\'82\'a9\'82\'e7\'8e\'67\'82\'a6\'82\'e9\'81\'75\'83\'76\'83\'8d\'83\'93\'83\'76\'83\'67\'8f\'57\'81\'76\'82\'c6\'81\'75\'8e\'d0\'93\'e0\'8b\'4b\'92\'e8\'90\'97\'8c\'60\'81\'76\'95\'74\'82\'ab
+\f0 </span>\
+                        </li>\
+                        <li class="solution__item">\
+                            <span class="check-icon">
+\f2 \uc0\u10003 
+\f0 </span>\
+                            <span>
+\f1 \'83\'58\'83\'7d\'83\'7a\'8e\'8b\'92\'ae
+\f0 OK
+\f1 \'81\'42\'96\'5a\'82\'b5\'82\'a2\'8e\'d0\'88\'f5\'82\'c5\'82\'e0\'83\'58\'83\'4c\'83\'7d\'8e\'9e\'8a\'d4\'82\'c5\'8a\'77\'8f\'4b\'8a\'ae\'97\'b9
+\f0 </span>\
+                        </li>\
+                    </ul>\
+                    \
+                    <a href="#curriculum" class="btn btn--primary">
+\f1 \'83\'4a\'83\'8a\'83\'4c\'83\'85\'83\'89\'83\'80\'82\'f0\'8c\'a9\'82\'e9
+\f0 </a>\
+                </div>\
+                <div class="solution__image fade-in-up">\
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop" alt="
+\f1 \'83\'49\'83\'74\'83\'42\'83\'58\'82\'cc\'89\'ef\'8b\'63\'95\'97\'8c\'69
+\f0 ">\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 5. 
+\f1 \'82\'b1\'82\'f1\'82\'c8\'8a\'e9\'8b\'c6\'82\'c9\'82\'a8\'82\'b7\'82\'b7\'82\'df
+\f0  (Who) -->\
+        <section class="section section--white">\
+            <div class="container who__container">\
+                <div class="who__content fade-in-up">\
+                    <h2 class="section__title" style="text-align: left; font-size: 1.8rem;">
+\f1 \'82\'b1\'82\'f1\'82\'c8\'89\'db\'91\'e8\'82\'f0\'82\'a8\'8e\'9d\'82\'bf\'82\'cc
+\f0 <br>
+\f1 \'8a\'e9\'8b\'c6\'97\'6c\'82\'c9\'82\'a8\'82\'b7\'82\'b7\'82\'df\'82\'c5\'82\'b7
+\f0 </h2>\
+                    <div class="who__bubbles">\
+                        <div class="bubble">
+\f1 \'81\'75
+\f0 AI
+\f1 \'82\'e2\'82\'e9\'82\'bc\'81\'76\'82\'c6\'8c\'be\'82\'c1\'82\'bd\'82\'e0\'82\'cc\'82\'cc\'81\'41\'8e\'d0\'88\'f5\'82\'aa\'82\'c2\'82\'a2\'82\'c4\'82\'b1\'82\'c8\'82\'a2
+\f0 </div>\
+                        <div class="bubble">
+\f1 \'8e\'e1\'8e\'e8\'8e\'d0\'88\'f5\'82\'d6\'82\'cc\'8b\'b3\'88\'e7\'83\'52\'83\'58\'83\'67\'82\'f0\'8d\'ed\'8c\'b8\'82\'b5\'81\'41\'8e\'a9\'91\'96\'82\'b3\'82\'b9\'82\'bd\'82\'a2
+\f0 </div>\
+                        <div class="bubble">
+\f1 \'83\'5a\'83\'4c\'83\'85\'83\'8a\'83\'65\'83\'42\'8c\'a4\'8f\'43\'82\'c6\'83\'5a\'83\'62\'83\'67\'82\'c5
+\f0 AI
+\f1 \'83\'8a\'83\'65\'83\'89\'83\'56\'81\'5b\'82\'f0\'8d\'82\'82\'df\'82\'bd\'82\'a2
+\f0 </div>\
+                        <div class="bubble">DX
+\f1 \'90\'84\'90\'69\'8e\'ba\'82\'f0\'8d\'ec\'82\'c1\'82\'bd\'82\'aa\'81\'41\'8b\'ef\'91\'cc\'93\'49\'82\'c8\'90\'ac\'89\'ca\'95\'a8\'82\'aa\'8f\'6f\'82\'c4\'82\'b1\'82\'c8\'82\'a2
+\f0 </div>\
+                    </div>\
+                </div>\
+                <div class="who__image fade-in-up">\
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop" alt="
+\f1 \'94\'59\'82\'de\'8c\'6f\'89\'63\'8e\'d2
+\f0 ">\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 6. 
+\f1 \'83\'52\'83\'93\'83\'65\'83\'93\'83\'63\'8f\'d0\'89\'ee
+\f0  (What you get) -->\
+        <section id="feature" class="section section--gray">\
+            <div class="container">\
+                <div class="section__header fade-in-up">\
+                    <h2 class="section__title">
+\f1 \'82\'b1\'82\'cc\'83\'76\'83\'8d\'83\'4f\'83\'89\'83\'80\'82\'c5\'8e\'e8\'82\'c9\'93\'fc\'82\'e9\'82\'e0\'82\'cc
+\f0 </h2>\
+                    <p class="section__subtitle">
+\f1 \'93\'ae\'89\'e6\'82\'f0\'8c\'a9\'82\'e9\'82\'be\'82\'af\'82\'c5\'82\'cd\'82\'a0\'82\'e8\'82\'dc\'82\'b9\'82\'f1\'81\'42\'8e\'c0\'96\'b1\'95\'cf\'8a\'76\'82\'cc\'83\'4c\'83\'62\'83\'67\'82\'f0\'92\'f1\'8b\'9f\'82\'b5\'82\'dc\'82\'b7\'81\'42
+\f0 </p>\
+                </div>\
+                <div class="feature__grid">\
+                    <div class="card feature-card fade-in-up">\
+                        <span class="feature-badge">
+\f1 \'93\'ae\'89\'e6\'8b\'b3\'8d\'de
+\f0 </span>\
+                        <h3 class="feature-card__title">
+\f1 \'8c\'6f\'89\'63\'90\'ed\'97\'aa
+\f0 \'d7AI
+\f1 \'82\'cc\'91\'53\'91\'cc\'91\'9c
+\f0 </h3>\
+                        <p class="problem-card__text">
+\f1 \'82\'c8\'82\'ba\'8d\'a1
+\f0 AI
+\f1 \'82\'c8\'82\'cc\'82\'a9\'81\'48\'8c\'6f\'89\'63\'83\'43\'83\'93\'83\'70\'83\'4e\'83\'67\'82\'cd\'81\'48\'82\'c6\'82\'a2\'82\'a4\'8f\'e3\'97\'ac\'82\'a9\'82\'e7\'81\'41\'8c\'bb\'8f\'ea\'82\'c5\'82\'cc\'8b\'ef\'91\'cc\'93\'49\'82\'c8\'83\'86\'81\'5b\'83\'58\'83\'50\'81\'5b\'83\'58\'82\'dc\'82\'c5\'82\'f0\'96\'d4\'97\'85\'81\'42
+\f0 </p>\
+                    </div>\
+                    <div class="card feature-card fade-in-up" style="transition-delay: 0.1s;">\
+                        <span class="feature-badge">
+\f1 \'93\'c1\'93\'54\'8e\'91\'97\'bf
+\f0 </span>\
+                        <h3 class="feature-card__title">
+\f1 \'82\'bb\'82\'cc\'82\'dc\'82\'dc\'8e\'67\'82\'a6\'82\'e9\'8b\'4b\'92\'e8\'83\'65\'83\'93\'83\'76\'83\'8c
+\f0 </h3>\
+                        <p class="problem-card__text">
+\f1 \'8e\'d0\'93\'e0\'e2\'67\'8b\'63\'82\'f0\'92\'ca\'82\'b5\'82\'e2\'82\'b7\'82\'a2\'81\'75\'90\'b6\'90\'ac
+\f0 AI
+\f1 \'97\'98\'97\'70\'83\'4b\'83\'43\'83\'68\'83\'89\'83\'43\'83\'93\'81\'76\'82\'cc
+\f0 Word
+\f1 \'83\'65\'83\'93\'83\'76\'83\'8c\'81\'5b\'83\'67\'82\'f0\'83\'76\'83\'8c\'83\'5b\'83\'93\'83\'67\'81\'42
+\f0 </p>\
+                    </div>\
+                    <div class="card feature-card fade-in-up" style="transition-delay: 0.2s;">\
+                        <span class="feature-badge">
+\f1 \'8e\'c0\'91\'48\'83\'8f\'81\'5b\'83\'4e
+\f0 </span>\
+                        <h3 class="feature-card__title">
+\f1 \'8b\'c6\'96\'b1\'89\'fc\'91\'50\'83\'76\'83\'8d\'83\'93\'83\'76\'83\'67\'8f\'57
+\f0 </h3>\
+                        <p class="problem-card__text">
+\f1 \'8b\'63\'8e\'96\'98\'5e\'97\'76\'96\'f1\'81\'41\'83\'81\'81\'5b\'83\'8b\'8d\'ec\'90\'ac\'81\'41\'83\'41\'83\'43\'83\'66\'83\'41\'8f\'6f\'82\'b5\'82\'c8\'82\'c7\'81\'41\'95\'94\'8f\'90\'95\'ca\'82\'c9\'82\'bb\'82\'cc\'82\'dc\'82\'dc\'8e\'67\'82\'a6\'82\'e9\'83\'76\'83\'8d\'83\'93\'83\'76\'83\'67
+\f0 100
+\f1 \'91\'49\'81\'42
+\f0 </p>\
+                    </div>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 7. 
+\f1 \'83\'4a\'83\'8a\'83\'4c\'83\'85\'83\'89\'83\'80
+\f0  (Curriculum) -->\
+        <section id="curriculum" class="section section--white">\
+            <div class="container">\
+                <div class="section__header fade-in-up">\
+                    <h2 class="section__title">
+\f1 \'93\'ae\'89\'e6\'83\'4a\'83\'8a\'83\'4c\'83\'85\'83\'89\'83\'80
+\f0 </h2>\
+                    <p class="section__subtitle">
+\f1 \'91\'53
+\f0 6
+\f1 \'8f\'cd\'81\'45\'8d\'87\'8c\'76\'96\'f1
+\f0 3
+\f1 \'8e\'9e\'8a\'d4\'82\'cc\'8f\'57\'92\'86\'83\'76\'83\'8d\'83\'4f\'83\'89\'83\'80
+\f0 </p>\
+                </div>\
+                <div class="timeline fade-in-up">\
+                    <div class="timeline__item">\
+                        <div class="timeline__number">1</div>\
+                        <div class="timeline__content">\
+                            <h3 class="timeline__title">AI
+\f1 \'8a\'54\'98\'5f\'82\'c6\'83\'72\'83\'57\'83\'6c\'83\'58\'83\'43\'83\'93\'83\'70\'83\'4e\'83\'67
+\f0 </h3>\
+                            <p class="timeline__desc">
+\f1 \'90\'b6\'90\'ac
+\f0 AI
+\f1 \'82\'cc\'8e\'64\'91\'67\'82\'dd\'82\'c6\'81\'41\'82\'c8\'82\'ba\'8d\'a1\'83\'72\'83\'57\'83\'6c\'83\'58\'82\'c5\'95\'4b\'90\'7b\'82\'c8\'82\'cc\'82\'a9\'82\'f0\'97\'9d\'89\'f0\'82\'b7\'82\'e9\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                    <div class="timeline__item">\
+                        <div class="timeline__number">2</div>\
+                        <div class="timeline__content">\
+                            <h3 class="timeline__title">
+\f1 \'83\'8a\'83\'58\'83\'4e\'83\'7d\'83\'6c\'83\'57\'83\'81\'83\'93\'83\'67\'82\'c6\'83\'5a\'83\'4c\'83\'85\'83\'8a\'83\'65\'83\'42
+\f0 </h3>\
+                            <p class="timeline__desc">
+\f1 \'92\'98\'8d\'ec\'8c\'a0\'81\'41\'8f\'ee\'95\'f1\'98\'52\'89\'6b\'81\'41\'83\'6e\'83\'8b\'83\'56\'83\'6c\'81\'5b\'83\'56\'83\'87\'83\'93\'82\'c8\'82\'c7\'82\'cc\'83\'8a\'83\'58\'83\'4e\'91\'ce\'8d\'f4\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                    <div class="timeline__item">\
+                        <div class="timeline__number">3</div>\
+                        <div class="timeline__content">\
+                            <h3 class="timeline__title">
+\f1 \'8a\'ee\'96\'7b\'91\'80\'8d\'ec\'82\'c6\'83\'76\'83\'8d\'83\'93\'83\'76\'83\'67\'83\'47\'83\'93\'83\'57\'83\'6a\'83\'41\'83\'8a\'83\'93\'83\'4f
+\f0 </h3>\
+                            <p class="timeline__desc">
+\f1 \'88\'d3\'90\'7d\'82\'b5\'82\'bd\'89\'f1\'93\'9a\'82\'f0\'88\'f8\'82\'ab\'8f\'6f\'82\'b7\'82\'bd\'82\'df\'82\'cc\'8e\'77\'8e\'a6\'8f\'6f\'82\'b5\'83\'65\'83\'4e\'83\'6a\'83\'62\'83\'4e\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                    <div class="timeline__item">\
+                        <div class="timeline__number">4</div>\
+                        <div class="timeline__content">\
+                            <h3 class="timeline__title">
+\f1 \'95\'94\'8f\'90\'95\'ca\'8a\'88\'97\'70\'83\'50\'81\'5b\'83\'58\'83\'58\'83\'5e\'83\'66\'83\'42\'81\'69\'89\'63\'8b\'c6\'81\'45\'90\'6c\'8e\'96\'81\'45\'8a\'4a\'94\'ad\'81\'6a
+\f0 </h3>\
+                            <p class="timeline__desc">
+\f1 \'8a\'65\'90\'45\'8e\'ed\'82\'c9\'82\'a8\'82\'af\'82\'e9\'8b\'ef\'91\'cc\'93\'49\'82\'c8\'8e\'9e\'92\'5a\'81\'45\'8c\'f8\'97\'a6\'89\'bb\'8e\'96\'97\'e1\'82\'cc\'8e\'c0\'89\'89\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                    <div class="timeline__item">\
+                        <div class="timeline__number">5</div>\
+                        <div class="timeline__content">\
+                            <h3 class="timeline__title">
+\f1 \'8e\'d0\'93\'e0\'93\'b1\'93\'fc\'82\'cc\'83\'8d\'81\'5b\'83\'68\'83\'7d\'83\'62\'83\'76\'8d\'ec\'90\'ac
+\f0 </h3>\
+                            <p class="timeline__desc">
+\f1 \'8e\'a9\'8e\'d0\'82\'c9
+\f0 AI
+\f1 \'95\'b6\'89\'bb\'82\'f0\'8d\'aa\'95\'74\'82\'a9\'82\'b9\'82\'e9\'82\'bd\'82\'df\'82\'cc\'83\'58\'83\'65\'83\'62\'83\'76\'98\'5f\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 8. 
+\f1 \'93\'b1\'93\'fc\'83\'43\'83\'81\'81\'5b\'83\'57
+\f0 /
+\f1 \'8e\'96\'97\'e1
+\f0  (Case) -->\
+        <section id="case" class="section section--gray">\
+            <div class="container">\
+                <div class="case__container">\
+                    <div class="case__content fade-in-up">\
+                        <h2 class="section__title" style="text-align: left;">
+\f1 \'93\'b1\'93\'fc\'82\'cd\'82\'c6\'82\'c4\'82\'e0\'83\'56\'83\'93\'83\'76\'83\'8b\'82\'c5\'82\'b7
+\f0 </h2>\
+                        <div class="step-flow">\
+                            <div class="step-item">\
+                                <span class="step-num">STEP 1</span>\
+                                <span>
+\f1 \'82\'a8\'90\'5c\'82\'b5\'8d\'9e\'82\'dd\'81\'45\'83\'41\'83\'4a\'83\'45\'83\'93\'83\'67\'94\'ad\'8d\'73
+\f0 </span>\
+                            </div>\
+                            <div class="step-item">\
+                                <span class="step-num">STEP 2</span>\
+                                <span>
+\f1 \'8a\'c7\'97\'9d\'8e\'d2\'97\'6c\'82\'c9\'82\'e6\'82\'e9\'83\'86\'81\'5b\'83\'55\'81\'5b\'93\'6f\'98\'5e
+\f0 </span>\
+                            </div>\
+                            <div class="step-item">\
+                                <span class="step-num">STEP 3</span>\
+                                <span>
+\f1 \'8e\'d0\'88\'f5\'8a\'65\'8e\'a9\'82\'c5\'93\'ae\'89\'e6\'8e\'8b\'92\'ae\'81\'69\'90\'69\'92\'bb\'8a\'c7\'97\'9d\'89\'c2\'94\'5c\'81\'6a
+\f0 </span>\
+                            </div>\
+                            <div class="step-item">\
+                                <span class="step-num">STEP 4</span>\
+                                <span>
+\f1 \'8e\'c0\'91\'48\'83\'8f\'81\'5b\'83\'4e\'81\'45\'8e\'d0\'93\'e0\'82\'d6\'82\'cc\'93\'57\'8a\'4a
+\f0 </span>\
+                            </div>\
+                        </div>\
+                        <div class="case-box">\
+                            <h4 style="font-weight: 700; margin-bottom: 12px;">
+\f1 \'8a\'94\'8e\'ae\'89\'ef\'8e\'d0\'83\'65\'83\'62\'83\'4e\'8f\'a4\'8e\'96
+\f0  
+\f1 \'97\'6c\'81\'69\'8f\'5d\'8b\'c6\'88\'f5
+\f0 50
+\f1 \'96\'bc\'81\'6a
+\f0 </h4>\
+                            <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-sub);">\
+                                
+\f1 \'81\'75\'93\'b1\'93\'fc\'91\'4f\'82\'cd\'81\'77
+\f0 AI
+\f1 \'82\'c8\'82\'f1\'82\'c4\'82\'a4\'82\'bf\'82\'cd\'8a\'d6\'8c\'57\'82\'c8\'82\'a2\'81\'78\'82\'c6\'82\'a2\'82\'a4\'8b\'f3\'8b\'43\'82\'c5\'82\'b5\'82\'bd\'82\'aa\'81\'41\'93\'ae\'89\'e6\'8c\'a4\'8f\'43\'8c\'e3\'81\'41\'89\'63\'8b\'c6\'95\'94\'82\'a9\'82\'e7\'81\'77\'8c\'da\'8b\'71\'83\'81\'81\'5b\'83\'8b\'82\'cc\'83\'68\'83\'89\'83\'74\'83\'67\'8d\'ec\'90\'ac\'82\'c9\'8e\'67\'82\'a2\'82\'bd\'82\'a2\'81\'78\'82\'c6\'92\'f1\'88\'c4\'82\'aa\'8f\'6f\'82\'e9\'82\'e6\'82\'a4\'82\'c9\'81\'42\'8c\'8e\'8a\'d4
+\f0 100
+\f1 \'8e\'9e\'8a\'d4\'88\'c8\'8f\'e3\'82\'cc\'8d\'48\'90\'94\'8d\'ed\'8c\'b8\'82\'c9\'90\'ac\'8c\'f7\'82\'b5\'82\'dc\'82\'b5\'82\'bd\'81\'42\'81\'76
+\f0 \
+                            </p>\
+                        </div>\
+                    </div>\
+                    <div class="case__image fade-in-up">\
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop" alt="
+\f1 \'8c\'a4\'8f\'43\'82\'f0\'8e\'f3\'82\'af\'82\'e9\'8e\'d0\'88\'f5
+\f0 " style="border-radius: var(--radius-card);">\
+                    </div>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 9. 
+\f1 \'97\'bf\'8b\'e0\'83\'5a\'83\'4e\'83\'56\'83\'87\'83\'93
+\f0  (Pricing) -->\
+        <section id="pricing" class="section section--white">\
+            <div class="container">\
+                <div class="section__header fade-in-up">\
+                    <h2 class="section__title">
+\f1 \'97\'bf\'8b\'e0\'81\'45\'92\'f1\'8b\'9f\'8c\'60\'8e\'ae
+\f0 </h2>\
+                    <p class="section__subtitle">
+\f1 \'8a\'e9\'8b\'c6\'82\'cc\'8b\'4b\'96\'cd\'82\'e2\'83\'6a\'81\'5b\'83\'59\'82\'c9\'8d\'87\'82\'ed\'82\'b9\'82\'bd\'83\'76\'83\'89\'83\'93\'82\'f0\'82\'b2\'97\'70\'88\'d3\'82\'b5\'82\'c4\'82\'a2\'82\'dc\'82\'b7
+\f0 </p>\
+                </div>\
+                <div class="pricing__grid">\
+                    <!-- 
+\f1 \'83\'76\'83\'89\'83\'93
+\f0 1 -->\
+                    <div class="card pricing-card fade-in-up">\
+                        <h3 style="font-size: 1.2rem; font-weight: 700;">
+\f1 \'83\'89\'83\'43\'83\'67\'83\'76\'83\'89\'83\'93
+\f0 </h3>\
+                        <div class="pricing-price">5<span>
+\f1 \'96\'9c\'89\'7e
+\f0 </span></div>\
+                        <p style="font-size: 0.9rem; color: var(--color-text-sub); margin-bottom: 24px;">
+\f1 \'94\'83\'82\'a2\'90\'d8\'82\'e8
+\f0  / 
+\f1 \'8e\'8b\'92\'ae\'90\'6c\'90\'94\'90\'a7\'8c\'c0\'82\'c8\'82\'b5
+\f0 </p>\
+                        <ul class="pricing-features">\
+                            <li>
+\f1 \'93\'ae\'89\'e6\'96\'7b\'95\'d2\'81\'69
+\f0 MP4
+\f1 \'92\'f1\'8b\'9f\'81\'6a
+\f0 </li>\
+                            <li>
+\f1 \'83\'65\'83\'4c\'83\'58\'83\'67\'8b\'b3\'8d\'de
+\f0 PDF</li>\
+                            <li>
+\f1 \'8e\'8b\'92\'ae\'8a\'fa\'8a\'d4\'81\'46\'96\'b3\'8a\'fa\'8c\'c0
+\f0 </li>\
+                        </ul>\
+                        <a href="#contact" class="btn btn--primary" style="background: #e2e8f0; color: #111;">
+\f1 \'8f\'da\'8d\'d7\'82\'f0\'8c\'a9\'82\'e9
+\f0 </a>\
+                    </div>\
+                    \
+                    <!-- 
+\f1 \'83\'76\'83\'89\'83\'93
+\f0 2 
+\f1 \'82\'a8\'82\'b7\'82\'b7\'82\'df
+\f0  -->\
+                    <div class="card pricing-card pricing-card--recommend fade-in-up" style="transition-delay: 0.1s;">\
+                        <span class="recommend-badge">
+\f1 \'82\'a8\'82\'b7\'82\'b7\'82\'df
+\f0 </span>\
+                        <h3 style="font-size: 1.2rem; font-weight: 700;">
+\f1 \'83\'58\'83\'5e\'83\'93\'83\'5f\'81\'5b\'83\'68\'83\'76\'83\'89\'83\'93
+\f0 </h3>\
+                        <div class="pricing-price">15<span>
+\f1 \'96\'9c\'89\'7e
+\f0 </span></div>\
+                        <p style="font-size: 0.9rem; color: var(--color-text-sub); margin-bottom: 24px;">
+\f1 \'83\'4e\'83\'89\'83\'45\'83\'68\'8a\'77\'8f\'4b\'8a\'c7\'97\'9d\'83\'56\'83\'58\'83\'65\'83\'80\'97\'98\'97\'70
+\f0 </p>\
+                        <ul class="pricing-features">\
+                            <li>
+\f1 \'93\'ae\'89\'e6\'8e\'8b\'92\'ae\'81\'69\'83\'4e\'83\'89\'83\'45\'83\'68\'8f\'e3\'81\'6a
+\f0 </li>\
+                            <li>
+\f1 \'8e\'d0\'88\'f5\'82\'cc\'8e\'f3\'8d\'75\'90\'69\'92\'bb\'8a\'c7\'97\'9d\'8b\'40\'94\'5c
+\f0 </li>\
+                            <li>
+\f1 \'97\'9d\'89\'f0\'93\'78\'83\'65\'83\'58\'83\'67\'8b\'40\'94\'5c\'95\'74\'82\'ab
+\f0 </li>\
+                            <li>
+\f1 \'83\'4b\'83\'43\'83\'68\'83\'89\'83\'43\'83\'93\'90\'97\'8c\'60\'81\'45\'83\'76\'83\'8d\'83\'93\'83\'76\'83\'67\'8f\'57
+\f0 </li>\
+                        </ul>\
+                        <a href="#contact" class="btn btn--primary">
+\f1 \'96\'b3\'97\'bf\'91\'8a\'92\'6b\'82\'c9\'90\'5c\'82\'b5\'8d\'9e\'82\'de
+\f0 </a>\
+                    </div>\
+                    \
+                    <!-- 
+\f1 \'83\'76\'83\'89\'83\'93
+\f0 3 -->\
+                    <div class="card pricing-card fade-in-up" style="transition-delay: 0.2s;">\
+                        <h3 style="font-size: 1.2rem; font-weight: 700;">
+\f1 \'83\'47\'83\'93\'83\'5e\'81\'5b\'83\'76\'83\'89\'83\'43\'83\'59
+\f0 </h3>\
+                        <div class="pricing-price" style="font-size: 2rem; padding: 6px 0;">
+\f1 \'82\'a8\'96\'e2\'82\'a2\'8d\'87\'82\'ed\'82\'b9
+\f0 </div>\
+                        <p style="font-size: 0.9rem; color: var(--color-text-sub); margin-bottom: 24px;">
+\f1 \'94\'ba\'91\'96\'8e\'78\'89\'87\'83\'52\'83\'93\'83\'54\'83\'8b\'83\'65\'83\'42\'83\'93\'83\'4f\'95\'74\'82\'ab
+\f0 </p>\
+                        <ul class="pricing-features">\
+                            <li>
+\f1 \'83\'58\'83\'5e\'83\'93\'83\'5f\'81\'5b\'83\'68\'83\'76\'83\'89\'83\'93\'91\'53\'8b\'40\'94\'5c
+\f0 </li>\
+                            <li>
+\f1 \'93\'b1\'93\'fc\'83\'4c\'83\'62\'83\'4e\'83\'49\'83\'74
+\f0 MTG
+\f1 \'8a\'4a\'8d\'c3
+\f0 </li>\
+                            <li>
+\f1 \'8c\'c2\'95\'ca\'83\'4a\'83\'58\'83\'5e\'83\'7d\'83\'43\'83\'59\'8c\'a4\'8f\'43
+\f0 </li>\
+                            <li>
+\f1 \'8c\'8e
+\f0 1
+\f1 \'89\'f1\'82\'cc\'92\'e8\'97\'e1\'8a\'88\'97\'70\'91\'8a\'92\'6b
+\f0 </li>\
+                        </ul>\
+                        <a href="#contact" class="btn btn--primary" style="background: #e2e8f0; color: #111;">
+\f1 \'91\'8a\'92\'6b\'82\'b7\'82\'e9
+\f0 </a>\
+                    </div>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 10. FAQ Section -->\
+        <section class="section section--gray">\
+            <div class="container">\
+                <div class="section__header fade-in-up">\
+                    <h2 class="section__title">
+\f1 \'82\'e6\'82\'ad\'82\'a0\'82\'e9\'8e\'bf\'96\'e2
+\f0 </h2>\
+                </div>\
+                <div class="faq__container fade-in-up">\
+                    <div class="faq-item">\
+                        <button class="faq-question">AI
+\f1 \'82\'cc\'92\'6d\'8e\'af\'82\'aa\'91\'53\'82\'ad\'82\'c8\'82\'a2\'8f\'f3\'91\'d4\'82\'c5\'82\'e0\'91\'e5\'8f\'e4\'95\'76\'82\'c5\'82\'b7\'82\'a9\'81\'48
+\f0 </button>\
+                        <div class="faq-answer">\
+                            <p>
+\f1 \'82\'cd\'82\'a2\'81\'41\'96\'e2\'91\'e8\'82\'a0\'82\'e8\'82\'dc\'82\'b9\'82\'f1\'81\'42\'96\'7b\'83\'76\'83\'8d\'83\'4f\'83\'89\'83\'80\'82\'cd\'94\'f1\'83\'47\'83\'93\'83\'57\'83\'6a\'83\'41\'82\'cc\'83\'72\'83\'57\'83\'6c\'83\'58\'83\'70\'81\'5b\'83\'5c\'83\'93\'8c\'fc\'82\'af\'82\'c9\'8d\'ec\'82\'e7\'82\'ea\'82\'c4\'82\'a8\'82\'e8\'81\'41\'90\'ea\'96\'e5\'97\'70\'8c\'ea\'82\'f0\'8b\'c9\'97\'cd\'8e\'67\'82\'ed\'82\'b8\'82\'c9\'89\'f0\'90\'e0\'82\'b5\'82\'c4\'82\'a2\'82\'dc\'82\'b7\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                    <div class="faq-item">\
+                        <button class="faq-question">
+\f1 \'93\'ae\'89\'e6\'82\'cc\'8e\'8b\'92\'ae\'8a\'fa\'8c\'c0\'82\'cd\'82\'a0\'82\'e8\'82\'dc\'82\'b7\'82\'a9\'81\'48
+\f0 </button>\
+                        <div class="faq-answer">\
+                            <p>
+\f1 \'83\'89\'83\'43\'83\'67\'83\'76\'83\'89\'83\'93\'81\'69\'94\'83\'82\'a2\'90\'d8\'82\'e8\'81\'6a\'82\'cc\'8f\'ea\'8d\'87\'82\'cd\'8a\'fa\'8c\'c0\'82\'cd\'82\'a0\'82\'e8\'82\'dc\'82\'b9\'82\'f1\'81\'42\'83\'4e\'83\'89\'83\'45\'83\'68\'8c\'5e\'82\'cc\'83\'58\'83\'5e\'83\'93\'83\'5f\'81\'5b\'83\'68\'83\'76\'83\'89\'83\'93\'82\'cc\'8f\'ea\'8d\'87\'82\'cd\'81\'41\'82\'b2\'8c\'5f\'96\'f1\'8a\'fa\'8a\'d4\'92\'86\'81\'69\'92\'ca\'8f\'ed
+\f0 1
+\f1 \'94\'4e\'8a\'d4\'81\'60\'81\'6a\'82\'cd\'89\'bd\'93\'78\'82\'c5\'82\'e0\'8e\'8b\'92\'ae\'89\'c2\'94\'5c\'82\'c5\'82\'b7\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                    <div class="faq-item">\
+                        <button class="faq-question">
+\f1 \'90\'bf\'8b\'81\'8f\'91\'95\'a5\'82\'a2\'82\'cd\'89\'c2\'94\'5c\'82\'c5\'82\'b7\'82\'a9\'81\'48
+\f0 </button>\
+                        <div class="faq-answer">\
+                            <p>
+\f1 \'82\'cd\'82\'a2\'81\'41\'96\'40\'90\'6c\'97\'6c\'8c\'fc\'82\'af\'82\'cc\'83\'54\'81\'5b\'83\'72\'83\'58\'82\'c5\'82\'b7\'82\'cc\'82\'c5\'81\'41\'90\'bf\'8b\'81\'8f\'91\'95\'a5\'82\'a2\'81\'69\'8c\'8e\'96\'96\'92\'f7\'82\'df\'97\'82\'8c\'8e\'96\'96\'95\'a5\'82\'a2\'81\'6a\'82\'c9\'91\'ce\'89\'9e\'82\'b5\'82\'c4\'82\'a8\'82\'e8\'82\'dc\'82\'b7\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                    <div class="faq-item">\
+                        <button class="faq-question">
+\f1 \'8e\'a9\'8e\'d0\'82\'cc\'8b\'c6\'96\'b1\'82\'c9\'8d\'87\'82\'ed\'82\'b9\'82\'bd\'83\'4a\'83\'58\'83\'5e\'83\'7d\'83\'43\'83\'59\'82\'cd\'89\'c2\'94\'5c\'82\'c5\'82\'b7\'82\'a9\'81\'48
+\f0 </button>\
+                        <div class="faq-answer">\
+                            <p>
+\f1 \'83\'47\'83\'93\'83\'5e\'81\'5b\'83\'76\'83\'89\'83\'43\'83\'59\'83\'76\'83\'89\'83\'93\'82\'c9\'82\'c4\'81\'41\'8b\'4d\'8e\'d0\'82\'cc\'8b\'c6\'8a\'45\'82\'e2\'8b\'c6\'96\'b1\'83\'74\'83\'8d\'81\'5b\'82\'c9\'8d\'87\'82\'ed\'82\'b9\'82\'bd\'92\'c7\'89\'c1\'8d\'75\'8b\'60\'82\'cc\'8d\'ec\'90\'ac\'82\'e2\'81\'41\'83\'8f\'81\'5b\'83\'4e\'83\'56\'83\'87\'83\'62\'83\'76\'82\'cc\'8a\'4a\'8d\'c3\'82\'aa\'89\'c2\'94\'5c\'82\'c5\'82\'b7\'81\'42\'8f\'da\'8d\'d7\'82\'cd\'82\'a8\'96\'e2\'82\'a2\'8d\'87\'82\'ed\'82\'b9\'82\'ad\'82\'be\'82\'b3\'82\'a2\'81\'42
+\f0 </p>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- 11. Footer -->\
+        <footer id="contact" class="footer">\
+            <div class="container">\
+                <div class="footer__content">\
+                    <div class="footer__info">\
+                        <h3>With AI .</h3>\
+                        <div class="footer__address">\
+                            <p>
+\f1 \'89\'5e\'89\'63\'81\'46\'8a\'94\'8e\'ae\'89\'ef\'8e\'d0
+\f0 With AI Solutions</p>\
+                            <p>
+\f1 \'81\'a7
+\f0 100-0005 
+\f1 \'93\'8c\'8b\'9e\'93\'73\'90\'e7\'91\'e3\'93\'63\'8b\'e6\'8a\'db\'82\'cc\'93\'e0
+\f0 1-1-1 AI
+\f1 \'83\'72\'83\'8b\'83\'66\'83\'42\'83\'93\'83\'4f
+\f0  8F</p>\
+                            <p>Email: contact@example.com</p>\
+                            <p>Tel: 03-1234-5678 (
+\f1 \'95\'bd\'93\'fa
+\f0  10:00-18:00)</p>\
+                        </div>\
+                    </div>\
+                    <div class="footer__links">\
+                        <ul style="display: flex; gap: 24px; color: #cbd5e1; font-size: 0.9rem;">\
+                            <li><a href="#">
+\f1 \'89\'ef\'8e\'d0\'8a\'54\'97\'76
+\f0 </a></li>\
+                            <li><a href="#">
+\f1 \'93\'c1\'92\'e8\'8f\'a4\'8e\'e6\'88\'f8\'96\'40\'82\'c9\'8a\'ee\'82\'c3\'82\'ad\'95\'5c\'8b\'4c
+\f0 </a></li>\
+                            <li><a href="#">
+\f1 \'83\'76\'83\'89\'83\'43\'83\'6f\'83\'56\'81\'5b\'83\'7c\'83\'8a\'83\'56\'81\'5b
+\f0 </a></li>\
+                        </ul>\
+                    </div>\
+                </div>\
+                <div class="footer__copy">\
+                    &copy; 2024 With AI Solutions Inc. All Rights Reserved.\
+                </div>\
+            </div>\
+        </footer>\
+\
+    </main>\
+\
+    <script>\
+        document.addEventListener('DOMContentLoaded', () => \{\
+            \
+            // 1. 
+\f1 \'83\'58\'83\'4e\'83\'8d\'81\'5b\'83\'8b\'83\'74\'83\'46\'81\'5b\'83\'68\'83\'43\'83\'93\'83\'41\'83\'6a\'83\'81\'81\'5b\'83\'56\'83\'87\'83\'93
+\f0 \
+            const observerOptions = \{\
+                root: null,\
+                rootMargin: '0px',\
+                threshold: 0.1\
+            \};\
+\
+            const observer = new IntersectionObserver((entries, observer) => \{\
+                entries.forEach(entry => \{\
+                    if (entry.isIntersecting) \{\
+                        entry.target.classList.add('is-visible');\
+                        observer.unobserve(entry.target); // 
+\f1 \'88\'ea\'93\'78\'94\'ad\'89\'ce\'82\'b5\'82\'bd\'82\'e7\'8a\'c4\'8e\'8b\'89\'f0\'8f\'9c
+\f0 \
+                    \}\
+                \});\
+            \}, observerOptions);\
+\
+            const fadeElements = document.querySelectorAll('.fade-in-up');\
+            fadeElements.forEach(el => observer.observe(el));\
+\
+\
+            // 2. 
+\f1 \'83\'6e\'83\'93\'83\'6f\'81\'5b\'83\'4b\'81\'5b\'83\'81\'83\'6a\'83\'85\'81\'5b
+\f0 \
+            const hamburger = document.getElementById('js-hamburger');\
+            const nav = document.getElementById('js-nav');\
+            const navLinks = document.querySelectorAll('.header__link, .header__nav .btn');\
+\
+            hamburger.addEventListener('click', () => \{\
+                const isOpen = nav.classList.contains('is-open');\
+                if (isOpen) \{\
+                    nav.classList.remove('is-open');\
+                    hamburger.setAttribute('aria-expanded', 'false');\
+                \} else \{\
+                    nav.classList.add('is-open');\
+                    hamburger.setAttribute('aria-expanded', 'true');\
+                \}\
+            \});\
+\
+            // 
+\f1 \'83\'81\'83\'6a\'83\'85\'81\'5b\'83\'8a\'83\'93\'83\'4e\'83\'4e\'83\'8a\'83\'62\'83\'4e\'8e\'9e\'82\'c9\'95\'c2\'82\'b6\'82\'e9
+\f0 \
+            navLinks.forEach(link => \{\
+                link.addEventListener('click', () => \{\
+                    if (nav.classList.contains('is-open')) \{\
+                        nav.classList.remove('is-open');\
+                    \}\
+                \});\
+            \});\
+\
+\
+            // 3. FAQ
+\f1 \'83\'41\'83\'52\'81\'5b\'83\'66\'83\'42\'83\'49\'83\'93
+\f0 \
+            const questions = document.querySelectorAll('.faq-question');\
+            \
+            questions.forEach(question => \{\
+                question.addEventListener('click', () => \{\
+                    // 
+\f1 \'8c\'bb\'8d\'dd\'82\'cc\'8f\'f3\'91\'d4\'82\'f0\'8e\'e6\'93\'be
+\f0 \
+                    const answer = question.nextElementSibling;\
+                    const isOpen = question.classList.contains('is-open');\
+\
+                    // 
+\f1 \'88\'ea\'93\'78\'91\'53\'82\'c4\'82\'cc\'8e\'bf\'96\'e2\'82\'f0\'95\'c2\'82\'b6\'82\'e9\'81\'69\'83\'49\'83\'76\'83\'56\'83\'87\'83\'93\'81\'46\'88\'ea\'82\'c2\'82\'be\'82\'af\'8a\'4a\'82\'ad\'8e\'64\'97\'6c\'82\'c9\'82\'b7\'82\'e9\'8f\'ea\'8d\'87\'81\'6a
+\f0 \
+                    // questions.forEach(q => \{\
+                    //     q.classList.remove('is-open');\
+                    //     q.nextElementSibling.style.maxHeight = null;\
+                    // \});\
+\
+                    if (!isOpen) \{\
+                        question.classList.add('is-open');\
+                        answer.style.maxHeight = answer.scrollHeight + "px";\
+                    \} else \{\
+                        question.classList.remove('is-open');\
+                        answer.style.maxHeight = null;\
+                    \}\
+                \});\
+            \});\
+        \});\
+    </script>\
+</body>\
+</html>}
